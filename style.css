@@ -8,14 +8,7 @@
   --White: hsl(0, 0%, 100%);
   /* Font Size */
   --Font-size-p: 16px;
-}
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
+  --error: #ffe8e6;
 }
 * {
   font-family: "Roboto", sans-serif;
@@ -23,6 +16,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
   background-color: var(--Charcoal-Grey);
   display: flex;
@@ -46,6 +40,14 @@ li {
 li:last-child {
   margin-bottom: 45px;
 }
+
+h1 {
+  margin-bottom: 10px;
+}
+
+div {
+  padding: 0 25px 25px 25px;
+}
 .first-section {
   background-color: var(--White);
   display: flex;
@@ -55,14 +57,6 @@ li:last-child {
   border-radius: 24px;
   height: auto;
 }
-h1 {
-  margin-bottom: 10px;
-}
-
-div {
-  padding: 0 25px 25px 25px;
-}
-
 .img--main {
   margin-bottom: 45px;
   width: 100%;
@@ -95,6 +89,17 @@ div {
 .email-input:focus {
   border: 2px solid blue;
 }
+.button-submit:hover {
+  background-color: rgb(255, 83, 121);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 83, 121, 1) 35%,
+    rgba(255, 105, 62, 1) 66%
+  );
+  -webkit-box-shadow: 0px 20px 50px -6px rgba(255, 96, 86, 0.63);
+  -moz-box-shadow: 0px 20px 50px -6px rgba(255, 96, 86, 0.63);
+  box-shadow: 0px 20px 50px -6px rgba(255, 96, 86, 0.63);
+}
 .button-submit {
   background: var(--Dark-Slate-Grey);
   border-style: none;
@@ -108,17 +113,38 @@ div {
   transition: background-color 1s ease, transform 1s ease;
 }
 
-.button-submit:hover {
-  background-color: rgb(255, 83, 121);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 83, 121, 1) 35%,
-    rgba(255, 105, 62, 1) 66%
-  );
-  -webkit-box-shadow: 0px 20px 50px -6px rgba(255, 96, 86, 0.63);
-  -moz-box-shadow: 0px 20px 50px -6px rgba(255, 96, 86, 0.63);
-  box-shadow: 0px 20px 50px -6px rgba(255, 96, 86, 0.63);
+.error-content {
+  display: flex;
+  justify-content: space-between;
 }
+.error-warning {
+  background-color: var(--error);
+  border-color: var(--Tomato);
+}
+.error-warning::placeholder {
+  color: var(--Tomato);
+}
+.error-warning-text {
+  color: var(--Tomato);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.display {
+  display: block;
+}
+
+.none {
+  display: none;
+}
+
+/*Media Querys*/
 @media (width >= 560px) {
   body {
     margin: 0;

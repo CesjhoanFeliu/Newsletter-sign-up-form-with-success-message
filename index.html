@@ -23,7 +23,8 @@
   </head>
   <body>
     <main>
-      <section class="first-section">
+      <!-- Sign-up form start -->
+      <section id="first-section" class="first-section">
         <img
           class="img--main"
           src="./assets/images/illustration-sign-up-mobile.svg"
@@ -60,20 +61,30 @@
               <p>And much more!</p>
             </li>
           </ul>
-          <p class="email-p">Email address</p>
-          <input
-            class="email-input"
-            type="email"
-            placeholder="email@company.com"
-            name=""
-            id=""
-          />
-          <button class="button-submit" type="submit">
-            Subscribe to monthly newsletter
-          </button>
+          <form id="form" action="">
+            <span class="error-content">
+              <label class="email-p" for="email">Email Address</label>
+              <label class="email-p" id="errorText" for="email"
+                >Valid email requited</label
+              >
+            </span>
+
+            <input
+              class="email-input"
+              type="email"
+              placeholder="email@company.com"
+              name=""
+              id="email"
+            />
+            <button id="button" class="button-submit" type="submit">
+              Subscribe to monthly newsletter
+            </button>
+          </form>
         </div>
       </section>
-      <!-- Sign-up form start -->
+      <section id="second-section" class="none">
+        <h1>hola</h1>
+      </section>
     </main>
 
     <!-- Sign-up form end -->
@@ -92,5 +103,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
