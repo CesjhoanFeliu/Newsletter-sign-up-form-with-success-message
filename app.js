@@ -13,6 +13,8 @@ let secondSection = document.getElementById("second-section");
 
 let form = document.getElementById("form");
 
+let span = document.getElementById("text-email");
+
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   //El método test() ejecuta la búsqueda de una ocurrencia entre una expresión regular y una cadena especificada. Devuelve true o false.
@@ -22,6 +24,8 @@ form.addEventListener("submit", function (e) {
     firstSection.classList.add("none");
     //hace aparecer la segunda sección
     secondSection.classList.toggle("none");
+    secondSection.classList.add("second-section");
+    span.innerText = emailInput.value;
   } else {
     console.log("not valid email");
     emailInput.classList.add("error-warning");
@@ -30,4 +34,4 @@ form.addEventListener("submit", function (e) {
   }
 });
 
-console.log(firstSection);
+console.log(span);
